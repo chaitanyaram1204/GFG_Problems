@@ -6,7 +6,7 @@ public:
         vector<int> ans;
         int row = 0, col = 0;
         int n = mat.size();
-        while (ans.size() == n * n)
+        while (ans.size() < n * n)
         {
             /*Going diagonally upward direction*/
             while (row >= 0 && col < n)
