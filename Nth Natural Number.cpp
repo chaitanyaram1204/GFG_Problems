@@ -1,0 +1,16 @@
+class Solution
+{
+public:
+    long long findNth(long long n)
+    {
+        long long ans = 0;
+        long long mult = 1;
+        while (n > 0)
+        {
+            ans += (n % 9) * mult;
+            n /= 9;
+            mult *= 10;
+        }
+        return ans;
+    }
+};
