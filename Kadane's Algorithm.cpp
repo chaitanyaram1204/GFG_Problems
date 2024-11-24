@@ -5,14 +5,15 @@ public:
     int maxSubarraySum(vector<int> &arr)
     {
         // code here...
-        int kadane = INT_MIN, count = 0;
-        for (int i = 0; i < arr.size(); i++)
+        int maxi = INT_MIN;
+        int sum = 0;
+        for (auto it : arr)
         {
-            count += arr[i];
-            kadane = max(kadane, count);
-            if (count < 0)
-                count = 0;
+            sum += it;
+            maxi = max(maxi, sum);
+            if (sum < 0)
+                sum = 0;
         }
-        return kadane;
+        return maxi;
     }
 };
